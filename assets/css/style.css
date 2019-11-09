@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #ffffff;
-    <!-- In a header the height must be set to show background color, since the default is 0 -->
+    /* In a header the height must be set to show background color, since the default is 0 */
     margin-top: 0px;
     height: 62px;
     
@@ -27,7 +27,8 @@ h1 {
     padding-bottom: 15px;
     margin-bottom: 0px;
     text-align: center;
-    border-block-color: #cccccc;
+    border-color: #cccccc;
+    
 }
 p {
     margin: 25px;
@@ -84,6 +85,7 @@ img {
     margin-bottom: 17px;
 }
 
+/* portfolioimg is a legacy class, replaced by imgblock */
 .portfolioimg {
     border: 1px solid;
     border-color: #4aaaa5;
@@ -92,9 +94,10 @@ img {
     float: none;
 }
 
+/* The text is included in a class so it wraps around the image (img class in index) */
 .textpar {
     width: 100%;
-    margin-left: 25px;
+    margin-left: 0px;
     margin-top: 25px;
     line-height: 150%;   
     padding-bottom: 10px; 
@@ -112,23 +115,31 @@ footer {
   
 }
 
+/* push creates a space above the footer */
 .push {
     height: 50px;
 }
 
+/* imgblock is to hold polaroid and container together in a single unit */
+
 .imgblock {
+    display: inline-block;
     width: 28%;
+    float: none;
+    margin: 20px;
 }
 
 .polaroid {
-    width: 28%;
+    width: 100%;
+    border-radius: 8px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
   }
 
+  /*  Text in all container divs must have the same number of lines */
   .container {
-    
+    width: 100%;
     text-align: center;
     padding: 10px 20px;
   }
